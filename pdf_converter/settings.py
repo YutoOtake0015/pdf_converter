@@ -4,7 +4,7 @@ import os
 BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-ynew(+hek&ou(@bhpdydtu-4fgl4=c4ptni-3mfg*+mnccdp4_'
 DEBUG = True
-ALLOWED_HOSTS = ['yuto-pdf-converter-789beede5e58.herokuapp.com']
+ALLOWED_HOSTS = ['yuto-pdf-converter-789beede5e58.herokuapp.com', '*']
 
 
 # Application definition
