@@ -9,5 +9,5 @@ urlpatterns = [
     path('upload/', views.UploadView.as_view(), name='upload'),
     path('list/', views.ListView.as_view(), name='list'),
     path('del_file/', views.del_file, name='del_file'),
-    path('', views.top)
+    path('', views.top),
 ]
