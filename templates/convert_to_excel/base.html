@@ -33,39 +33,11 @@
 </head>
 
 <body class="hold-transition sidebar-mini layout-fixed">
-  <script lang="JavaScript" type="text/javascript">
-    // 全て選択選択で全チェックボックスをチェック
-    function AllChecked() {
-      var all = document.form.all.checked;
-      if (document.form.checks.length == undefined) {
-        document.form.checks.checked = all;
-        return
-      }
-      for (var i = 0; i < document.form.checks.length; i++) {
-        document.form.checks[i].checked = all;
-      }
-    }
-
-    // 個別のチェックボックスの選択解除で全て選択も解除
-    function DisChecked() {
-      var checks = document.form.checks;
-      var checksCount = 0;
-      for (var i = 0; i < checks.length; i++) {
-        if (checks[i].checked == false) {
-          document.form.all.checked = false;
-        } else {
-          checksCount += 1;
-          if (checksCount == checks.length) {
-            document.form.all.checked = true;
-          }
-        }
-      }
-    }
-  </script>
   <div class="wrapper">
     <!-- Preloader -->
     <div class="preloader flex-column justify-content-center align-items-center">
-      <img class="animation__shake" src="dist/img/AdminLTELogo.png" alt="AdminLTELogo" height="60" width="60">
+      <!-- <img class="animation__shake" src="dist/img/AdminLTELogo.png" alt="AdminLTELogo" height="60" width="60"> -->
+      <img class="animation__shake" src="/Users/yutootake/MyApp/pdf_converter/pdf_converter/static/AdminLTE-3.2.0/dist/img/AdminLTELogo.png" alt="AdminLTELogo" height="60" width="60">
     </div>
 
     <!-- Navbar -->
@@ -77,9 +49,6 @@
         </li>
         <li class="nav-item d-none d-sm-inline-block">
           <a href="{% url 'convert_to_excel:top' %}" class="nav-link">Home</a>
-        </li>
-        <li class="nav-item d-none d-sm-inline-block">
-          <a href="#" class="nav-link">Contact</a>
         </li>
       </ul>
 
@@ -105,21 +74,13 @@
       <a href="{% url 'convert_to_excel:top' %}" class="brand-link">
         <span class="brand-text font-weight-light">PDF Converter<span>
       </a>
-
       <!-- Sidebar -->
       <div class="sidebar">
-
         <!-- Sidebar Menu -->
         <nav class="mt-2">
           <ul class="nav nav-pills nav-sidebar flex-column" data-widget="treeview" role="menu" data-accordion="false">
             <li class="header">メインメニュー</li>
             <li class="active treeview">
-              <a href="#">
-                <i class="fa fa-dashboard"></i> <span>ダッシュボード</span>
-                <span class="pull-right-container">
-                  <i class="fa fa-angle-left pull-right"></i>
-                </span>
-              </a>
               <ul class="treeview-menu">
                 <li class="active"><a href="{% url 'convert_to_excel:upload' %}"><i class="fa fa-circle-o"></i>
                     PDFアップロード</a></li>
